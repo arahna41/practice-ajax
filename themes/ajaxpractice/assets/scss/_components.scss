@@ -1,0 +1,17 @@
+.main_content {
+  min-height: calc(100vh - 120px - 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.container_boxed {
+  padding-left: 32px;
+  padding-right: 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}

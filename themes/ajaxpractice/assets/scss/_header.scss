@@ -1,0 +1,32 @@
+/* Header */
+.site-header {
+background-color: $primary;
+padding-top: 32px;
+padding-bottom: 32px;
+  .container_boxed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+    .header_nav ul {
+      display: flex;
+      gap: 24px;
+      a {
+        color: $light;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.logo {
+  text-decoration: none;
+  font-size: 48px;
+  line-height: 56px;
+  color: $light;
+}

@@ -1,0 +1,108 @@
+.products_container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.product_item {
+  padding: 18px;
+  transition: box-shadow 0.4s ease;
+  box-shadow: 0 0 1px 0 $primary;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .image_wraper {
+    aspect-ratio: 1;
+    position: relative;
+    .sex {
+      position: absolute;
+      display: block;
+      content: "";
+      padding: 4px 8px;
+      top: 20px;
+      left: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      &.male {
+        background-color: #71dbff;
+      }
+      &.female {
+        background-color: #ff6767;
+      }
+      &.unisex {
+        background-color: #c2f770;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .price {
+    color: $accent;
+    font-weight: 700;
+  }
+  &:hover {
+    box-shadow: 4px 4px 6px 0px $primary;
+  }
+}
+#loadmore_product {
+  cursor: pointer;
+  background-color: $accent;
+  padding: 12px 24px;
+  margin: 48px auto 0;
+  display: block;
+  width: max-content;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: #CDAB92;
+  }
+}
+
+.product_grid_head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-direction: column;
+  gap: 16px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.filters_block {
+  display: flex;
+  gap: 16px;
+  .search_field {
+    display: flex;
+    flex-direction: column;
+  }
+  .filters {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+}
+
+.filter_container {
+  display: flex;
+  flex-direction: column;
+}

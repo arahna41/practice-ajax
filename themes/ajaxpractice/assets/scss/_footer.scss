@@ -1,0 +1,22 @@
+/* Footer */
+.site-footer {
+  background-color: $background;
+  min-height: 300px;
+  display: flex;
+  padding: 48px 0;
+  .container_boxed {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    .logo {
+      color: $primary;
+    }
+    .author {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
